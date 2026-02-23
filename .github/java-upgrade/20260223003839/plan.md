@@ -22,7 +22,7 @@
 
 ## Guidelines
 > Note: You can add any specific guidelines or constraints for the upgrade process here if needed, bullet points are preferred.
-
+- No critical vulnerabilities are introduced though code and dependency changes.
 
 ## Additional Options
 - Run tests before and after the upgrade: true
