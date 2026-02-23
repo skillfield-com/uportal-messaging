@@ -1,0 +1,22 @@
+2026-02-23T01:00:54.010Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2026-02-23T01:00:54.011Z [INFO] [Environment] Running command (Java 8): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/homebrew/Cellar/maven/3.9.11/libexec
+Java version: 1.8.0_482, vendor: Temurin, runtime: /Users/subodhchettri/.jdk/jdk-8/Contents/Home/jre
+Default locale: en_AU, platform encoding: UTF-8
+OS name: "mac os x", version: "26.3", arch: "x86_64", family: "mac"
+2026-02-23T01:00:54.998Z [INFO] [BaseBuildTool] New version of mvn: 3.9.11 -> 3.9.11
+2026-02-23T01:00:54.998Z [INFO] [MavenBuildTool] Getting Java version of /Users/subodhchettri/repo/uportal-messaging from pom.xml
+2026-02-23T01:00:54.999Z [INFO] [MavenBuildTool] Searching for pom.xml files in /Users/subodhchettri/repo/uportal-messaging
+2026-02-23T01:00:55.001Z [INFO] [MavenBuildTool] Found pom.xml files: /Users/subodhchettri/repo/uportal-messaging/pom.xml
+2026-02-23T01:00:55.002Z [INFO] [MavenBuildTool] Java version found in /Users/subodhchettri/repo/uportal-messaging/pom.xml: 8
+2026-02-23T01:00:55.003Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '8' || '21'
+2026-02-23T01:00:55.014Z [INFO] [MavenBuildTool] Getting build errors of /Users/subodhchettri/repo/uportal-messaging using Maven
+2026-02-23T01:00:55.016Z [INFO] [Environment] Running command (Java 21): mvn clean test-compile -q -B -fn
+2026-02-23T01:00:57.880Z [INFO] [MavenBuildTool] parsing compilation errors.
+2026-02-23T01:00:57.882Z [INFO] [BaseBuildTool] Found 1 modules: .
+2026-02-23T01:00:57.896Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2026-02-23T01:00:57.899Z [INFO] [MavenBuildTool] Cleaning /Users/subodhchettri/repo/uportal-messaging using Maven
+2026-02-23T01:00:57.902Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2026-02-23T01:00:58.803Z [INFO] Build succeeded! There are no build errors in the project.
+2026-02-23T01:00:58.831Z [INFO] Build project completed. Looking for next task...

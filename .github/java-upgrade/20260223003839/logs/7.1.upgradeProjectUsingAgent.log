@@ -1,0 +1,10 @@
+2026-02-23T01:00:53.914Z [INFO] [Task.commitChanges](7.1): Committing changes for /Users/subodhchettri/repo/uportal-messaging with message: Upgrade to Java 21 and Spring Boot 2.7.x
+2026-02-23T01:00:53.957Z [INFO] [appmod/java-upgrade-20260223003839 cf8f611] Upgrade to Java 21 and Spring Boot 2.7.x
+ 1 file changed, 5 insertions(+)
+ create mode 100644 rewrite.yml
+
+2026-02-23T01:00:53.973Z [INFO] cf8f611fe7a537becd4ab5dfed1ab178b2bf6f23
+
+2026-02-23T01:00:53.991Z [INFO] 5	0	rewrite.yml
+
+2026-02-23T01:00:53.994Z [INFO] [Task.commitChanges](7.1): Committed changes for /Users/subodhchettri/repo/uportal-messaging with message: Upgrade to Java 21 and Spring Boot 2.7.x

@@ -1,0 +1,350 @@
+2026-02-23T01:09:55.820Z [INFO] Getting code changes using `git diff`...
+2026-02-23T01:09:55.843Z [INFO] diff --git a/pom.xml b/pom.xml
+index cae2f66..749c934 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -11,7 +11,7 @@
+   <parent>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-parent</artifactId>
+-    <version>1.5.9.RELEASE</version>
++    <version>2.7.18</version>
+   </parent>
+ 
+   <packaging>war</packaging>
+@@ -71,6 +71,12 @@
+   </repositories>
+ 
+   <dependencies>
++        <dependency>
++          <groupId>junit</groupId>
++          <artifactId>junit</artifactId>
++          <version>4.13.2</version>
++          <scope>test</scope>
++        </dependency>
+     <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-web</artifactId>
+@@ -103,6 +109,11 @@
+       <artifactId>commons-lang3</artifactId>
+       <version>3.7</version>
+     </dependency>
++    <dependency>
++      <groupId>jakarta.validation</groupId>
++      <artifactId>jakarta.validation-api</artifactId>
++      <version>3.0.2</version>
++    </dependency>
+     <!-- tag::tests[] -->
+     <dependency>
+       <groupId>org.springframework.boot</groupId>
+@@ -115,11 +126,29 @@
+       	</exclusion>
+       </exclusions>
+     </dependency>
++    <dependency>
++      <groupId>org.mockito</groupId>
++      <artifactId>mockito-core</artifactId>
++      <version>5.2.0</version>
++      <scope>test</scope>
++    </dependency>
++    <dependency>
++      <groupId>org.mockito</groupId>
++      <artifactId>mockito-inline</artifactId>
++      <version>5.2.0</version>
++      <scope>test</scope>
++    </dependency>
++    <dependency>
++      <groupId>cglib</groupId>
++      <artifactId>cglib</artifactId>
++      <version>3.3.0</version>
++      <scope>test</scope>
++    </dependency>
+     <!-- end::tests[] -->
+   </dependencies>
+ 
+   <properties>
+-    <java.version>1.8</java.version>
++    <java.version>21</java.version>
+   </properties>
+ 
+   <build>
+diff --git a/rewrite.yml b/rewrite.yml
+new file mode 100644
+index 0000000..46ec8b4
+--- /dev/null
++++ b/rewrite.yml
+@@ -0,0 +1,5 @@
++---
++activeRecipes:
++  - org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7
++  - org.openrewrite.java.migrate.UpgradeToJava21
++---
+diff --git a/src/main/java/edu/Application.java b/src/main/java/edu/Application.java
+index f3dcdf4..e02b19c 100644
+--- a/src/main/java/edu/Application.java
++++ b/src/main/java/edu/Application.java
+@@ -2,10 +2,10 @@ package edu;
+ 
+ import org.springframework.boot.SpringApplication;
+ import org.springframework.boot.autoconfigure.SpringBootApplication;
+-import org.springframework.boot.web.support.SpringBootServletInitializer;
++// import removed for Spring Boot 2.7.x
+ 
+ @SpringBootApplication
+-public class Application extends SpringBootServletInitializer {
++public class Application {
+ 
+   public static void main(String[] args) {
+     SpringApplication.run(Application.class, args);
+diff --git a/src/main/java/edu/wisc/my/messages/model/Message.java b/src/main/java/edu/wisc/my/messages/model/Message.java
+index 5b42834..ce24ff1 100644
+--- a/src/main/java/edu/wisc/my/messages/model/Message.java
++++ b/src/main/java/edu/wisc/my/messages/model/Message.java
+@@ -1,16 +1,19 @@
+ package edu.wisc.my.messages.model;
+ 
+-import com.fasterxml.jackson.annotation.JsonIgnore;
+-import com.fasterxml.jackson.annotation.JsonProperty;
+-import edu.wisc.my.messages.service.ExpiredMessagePredicate;
+-import edu.wisc.my.messages.service.GoneLiveMessagePredicate;
+ import java.time.LocalDateTime;
+ import java.util.Objects;
+ import java.util.function.Predicate;
+-import javax.validation.constraints.NotNull;
++
+ import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
+ 
++import com.fasterxml.jackson.annotation.JsonIgnore;
++import com.fasterxml.jackson.annotation.JsonProperty;
++
++import edu.wisc.my.messages.service.ExpiredMessagePredicate;
++import edu.wisc.my.messages.service.GoneLiveMessagePredicate;
++import jakarta.validation.constraints.NotNull;
++
+ /**
+  * Message
+  */
+diff --git a/src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java b/src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java
+index bb63a00..c02f1b2 100644
+--- a/src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java
++++ b/src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java
+@@ -9,7 +9,7 @@ import org.junit.Before;
+ import org.junit.Test;
+ import org.junit.runner.RunWith;
+ import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.context.embedded.LocalServerPort;
++import org.springframework.boot.web.server.LocalServerPort;
+ import org.springframework.boot.test.context.SpringBootTest;
+ import org.springframework.boot.test.web.client.TestRestTemplate;
+ import org.springframework.http.ResponseEntity;
+diff --git a/src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java b/src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java
+index d632ac6..3e8b2c8 100644
+--- a/src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java
++++ b/src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java
+@@ -2,7 +2,7 @@ package edu.wisc.my.messages.controller;
+ 
+ import static org.junit.Assert.assertEquals;
+ import static org.junit.Assert.assertSame;
+-import static org.mockito.Matchers.eq;
++import static org.mockito.ArgumentMatchers.eq;
+ import static org.mockito.Mockito.any;
+ import static org.mockito.Mockito.anyString;
+ import static org.mockito.Mockito.mock;
+diff --git a/src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java b/src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java
+index 7760b76..398a577 100644
+--- a/src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java
++++ b/src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java
+@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
+ import static org.junit.Assert.assertNotNull;
+ import static org.junit.Assert.assertNull;
+ import static org.junit.Assert.assertTrue;
+-import static org.mockito.Matchers.any;
++import static org.mockito.ArgumentMatchers.any;
+ import static org.mockito.Mockito.mock;
+ import static org.mockito.Mockito.when;
+ 
+
+2026-02-23T01:09:55.843Z [INFO] diff content: 
+ diff --git a/pom.xml b/pom.xml
+index cae2f66..749c934 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -11,7 +11,7 @@
+   <parent>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-parent</artifactId>
+-    <version>1.5.9.RELEASE</version>
++    <version>2.7.18</version>
+   </parent>
+ 
+   <packaging>war</packaging>
+@@ -71,6 +71,12 @@
+   </repositories>
+ 
+   <dependencies>
++        <dependency>
++          <groupId>junit</groupId>
++          <artifactId>junit</artifactId>
++          <version>4.13.2</version>
++          <scope>test</scope>
++        </dependency>
+     <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-web</artifactId>
+@@ -103,6 +109,11 @@
+       <artifactId>commons-lang3</artifactId>
+       <version>3.7</version>
+     </dependency>
++    <dependency>
++      <groupId>jakarta.validation</groupId>
++      <artifactId>jakarta.validation-api</artifactId>
++      <version>3.0.2</version>
++    </dependency>
+     <!-- tag::tests[] -->
+     <dependency>
+       <groupId>org.springframework.boot</groupId>
+@@ -115,11 +126,29 @@
+       	</exclusion>
+       </exclusions>
+     </dependency>
++    <dependency>
++      <groupId>org.mockito</groupId>
++      <artifactId>mockito-core</artifactId>
++      <version>5.2.0</version>
++      <scope>test</scope>
++    </dependency>
++    <dependency>
++      <groupId>org.mockito</groupId>
++      <artifactId>mockito-inline</artifactId>
++      <version>5.2.0</version>
++      <scope>test</scope>
++    </dependency>
++    <dependency>
++      <groupId>cglib</groupId>
++      <artifactId>cglib</artifactId>
++      <version>3.3.0</version>
++      <scope>test</scope>
++    </dependency>
+     <!-- end::tests[] -->
+   </dependencies>
+ 
+   <properties>
+-    <java.version>1.8</java.version>
++    <java.version>21</java.version>
+   </properties>
+ 
+   <build>
+diff --git a/rewrite.yml b/rewrite.yml
+new file mode 100644
+index 0000000..46ec8b4
+--- /dev/null
++++ b/rewrite.yml
+@@ -0,0 +1,5 @@
++---
++activeRecipes:
++  - org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7
++  - org.openrewrite.java.migrate.UpgradeToJava21
++---
+diff --git a/src/main/java/edu/Application.java b/src/main/java/edu/Application.java
+index f3dcdf4..e02b19c 100644
+--- a/src/main/java/edu/Application.java
++++ b/src/main/java/edu/Application.java
+@@ -2,10 +2,10 @@ package edu;
+ 
+ import org.springframework.boot.SpringApplication;
+ import org.springframework.boot.autoconfigure.SpringBootApplication;
+-import org.springframework.boot.web.support.SpringBootServletInitializer;
++// import removed for Spring Boot 2.7.x
+ 
+ @SpringBootApplication
+-public class Application extends SpringBootServletInitializer {
++public class Application {
+ 
+   public static void main(String[] args) {
+     SpringApplication.run(Application.class, args);
+diff --git a/src/main/java/edu/wisc/my/messages/model/Message.java b/src/main/java/edu/wisc/my/messages/model/Message.java
+index 5b42834..ce24ff1 100644
+--- a/src/main/java/edu/wisc/my/messages/model/Message.java
++++ b/src/main/java/edu/wisc/my/messages/model/Message.java
+@@ -1,16 +1,19 @@
+ package edu.wisc.my.messages.model;
+ 
+-import com.fasterxml.jackson.annotation.JsonIgnore;
+-import com.fasterxml.jackson.annotation.JsonProperty;
+-import edu.wisc.my.messages.service.ExpiredMessagePredicate;
+-import edu.wisc.my.messages.service.GoneLiveMessagePredicate;
+ import java.time.LocalDateTime;
+ import java.util.Objects;
+ import java.util.function.Predicate;
+-import javax.validation.constraints.NotNull;
++
+ import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
+ 
++import com.fasterxml.jackson.annotation.JsonIgnore;
++import com.fasterxml.jackson.annotation.JsonProperty;
++
++import edu.wisc.my.messages.service.ExpiredMessagePredicate;
++import edu.wisc.my.messages.service.GoneLiveMessagePredicate;
++import jakarta.validation.constraints.NotNull;
++
+ /**
+  * Message
+  */
+diff --git a/src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java b/src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java
+index bb63a00..c02f1b2 100644
+--- a/src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java
++++ b/src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java
+@@ -9,7 +9,7 @@ import org.junit.Before;
+ import org.junit.Test;
+ import org.junit.runner.RunWith;
+ import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.context.embedded.LocalServerPort;
++import org.springframework.boot.web.server.LocalServerPort;
+ import org.springframework.boot.test.context.SpringBootTest;
+ import org.springframework.boot.test.web.client.TestRestTemplate;
+ import org.springframework.http.ResponseEntity;
+diff --git a/src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java b/src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java
+index d632ac6..3e8b2c8 100644
+--- a/src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java
++++ b/src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java
+@@ -2,7 +2,7 @@ package edu.wisc.my.messages.controller;
+ 
+ import static org.junit.Assert.assertEquals;
+ import static org.junit.Assert.assertSame;
+-import static org.mockito.Matchers.eq;
++import static org.mockito.ArgumentMatchers.eq;
+ import static org.mockito.Mockito.any;
+ import static org.mockito.Mockito.anyString;
+ import static org.mockito.Mockito.mock;
+diff --git a/src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java b/src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java
+index 7760b76..398a577 100644
+--- a/src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java
++++ b/src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java
+@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
+ import static org.junit.Assert.assertNotNull;
+ import static org.junit.Assert.assertNull;
+ import static org.junit.Assert.assertTrue;
+-import static org.mockito.Matchers.any;
++import static org.mockito.ArgumentMatchers.any;
+ import static org.mockito.Mockito.mock;
+ import static org.mockito.Mockito.when;
+2026-02-23T01:09:55.848Z [INFO] Validating code behavior changes...
+2026-02-23T01:09:55.854Z [INFO] [unknown]: there are 164 lines.
+2026-02-23T01:09:56.084Z [INFO] [unknown]: there are 1570 tokens.
+2026-02-23T01:09:56.096Z [INFO] [unknown]: no need to split the diff file.
+2026-02-23T01:09:56.107Z [INFO] summarizing behavior changes...
+2026-02-23T01:09:56.118Z [INFO] summarizing behavior changes of part 1...
+2026-02-23T01:09:58.564Z [INFO] summarized behavior changes of part 1.
+2026-02-23T01:09:58.564Z [INFO] summarized behavior changes of all parts.
+2026-02-23T01:09:58.584Z [INFO] summarizing behavior changes...
+2026-02-23T01:09:58.596Z [INFO] summarizing behavior changes of part 1...
+2026-02-23T01:10:00.163Z [INFO] summarized behavior changes of part 1.
+2026-02-23T01:10:00.163Z [INFO] summarized behavior changes of all parts.
+2026-02-23T01:10:00.187Z [INFO] summarizing behavior changes...
+2026-02-23T01:10:00.198Z [INFO] summarizing behavior changes of part 1...
+2026-02-23T01:10:01.242Z [INFO] summarized behavior changes of part 1.
+2026-02-23T01:10:01.249Z [INFO] summarized behavior changes of all parts.
+2026-02-23T01:10:01.255Z [INFO] {}
+2026-02-23T01:10:01.259Z [INFO] Done validating code behavior changes...

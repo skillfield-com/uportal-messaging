@@ -1,0 +1,52 @@
+2026-02-23T00:40:19.896Z [INFO] [MavenBuildTool] Running test cases of /Users/subodhchettri/repo/uportal-messaging using Maven
+2026-02-23T00:40:19.897Z [INFO] [Environment] Running command (Java 8): mvn clean test -q -B -fn
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running edu.wisc.my.messages.controller.MessagesControllerTest
+ 
+A Spring Boot  (v1.5.9.RELEASE) application.
+
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.084 sec - in edu.wisc.my.messages.controller.MessagesControllerTest
+Running edu.wisc.my.messages.controller.IsMemberOfHeaderParserTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in edu.wisc.my.messages.controller.IsMemberOfHeaderParserTest
+Running edu.wisc.my.messages.controller.MessagesControllerUnitTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.099 sec - in edu.wisc.my.messages.controller.MessagesControllerUnitTest
+Running edu.wisc.my.messages.time.IsoDateTimeStringBeforePredicateTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in edu.wisc.my.messages.time.IsoDateTimeStringBeforePredicateTest
+Running edu.wisc.my.messages.time.IsoDateTimeStringAfterPredicateTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in edu.wisc.my.messages.time.IsoDateTimeStringAfterPredicateTest
+Running edu.wisc.my.messages.model.ValidDateTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in edu.wisc.my.messages.model.ValidDateTest
+Running edu.wisc.my.messages.model.ActionButtonTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in edu.wisc.my.messages.model.ActionButtonTest
+Running edu.wisc.my.messages.model.MessageFilterTest
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in edu.wisc.my.messages.model.MessageFilterTest
+Running edu.wisc.my.messages.model.UserTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in edu.wisc.my.messages.model.UserTest
+Running edu.wisc.my.messages.model.MessageArrayTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in edu.wisc.my.messages.model.MessageArrayTest
+Running edu.wisc.my.messages.service.MessagesServiceTest
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 sec - in edu.wisc.my.messages.service.MessagesServiceTest
+Running edu.wisc.my.messages.service.MessageIdPredicateTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in edu.wisc.my.messages.service.MessageIdPredicateTest
+Running edu.wisc.my.messages.service.GoneLiveMessagePredicateTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in edu.wisc.my.messages.service.GoneLiveMessagePredicateTest
+Running edu.wisc.my.messages.service.ExpiredMessagePredicateTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 sec - in edu.wisc.my.messages.service.ExpiredMessagePredicateTest
+Running edu.wisc.my.messages.data.MessagesFromTextFileTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 sec - in edu.wisc.my.messages.data.MessagesFromTextFileTest
+Running edu.wisc.my.messages.exception.PrematureMessageExceptionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in edu.wisc.my.messages.exception.PrematureMessageExceptionTest
+Running edu.wisc.my.messages.exception.ExpiredMessageExceptionTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 sec - in edu.wisc.my.messages.exception.ExpiredMessageExceptionTest
+
+Results :
+
+Tests run: 96, Failures: 0, Errors: 0, Skipped: 0
+
+2026-02-23T00:40:37.039Z [INFO] [MavenBuildTool] loading surefire reports.
+2026-02-23T00:40:37.054Z [INFO] [MavenBuildTool] summarizing surefire reports.
+2026-02-23T00:40:37.055Z [INFO] [MavenBuildTool] Cleaning /Users/subodhchettri/repo/uportal-messaging using Maven
+2026-02-23T00:40:37.058Z [INFO] [Environment] Running command (Java 8): mvn clean -q -B -fn

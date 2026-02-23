@@ -1,0 +1,5 @@
+---
+activeRecipes:
+  - org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7
+  - org.openrewrite.java.migrate.UpgradeToJava21
+---
