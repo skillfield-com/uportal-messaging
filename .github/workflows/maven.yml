@@ -34,8 +34,12 @@ jobs:
       run: mvn -B package --file pom.xml
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-    - name: Update dependency graph
-      uses: advanced-security/maven-dependency-submission-action@v4
+    - name: Maven Dependency Tree Dependency Submission
+      # You may pin to the exact commit or the version.
+      # uses: advanced-security/maven-dependency-submission-action@b275d12641ac2d2108b2cbb7598b154ad2f2cee8
+      uses: advanced-security/maven-dependency-submission-action@v5.0.0
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        # The GitHub token to use to submit the depedency snapshot to the repository
+        token: ${{ github.token }}
+          
   
