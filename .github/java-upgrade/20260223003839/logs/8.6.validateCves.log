@@ -1,0 +1,36 @@
+2026-02-23T01:09:50.393Z [INFO] Some dependencies have been modified or added during the upgrade. start validating CVEs.
+2026-02-23T01:09:50.414Z [INFO] Getting CVEs for dependencies: junit:junit:4.13.2:jar,jakarta.validation:jakarta.validation-api:3.0.2:jar,org.mockito:mockito-core:5.2.0:jar,org.mockito:mockito-inline:5.2.0:jar,cglib:cglib:3.3.0:jar,org.springframework.boot:spring-boot-starter-web:2.7.18:jar,org.springframework.boot:spring-boot-starter-data-rest:2.7.18:jar,org.springframework.boot:spring-boot-starter-tomcat:2.7.18:jar,org.springframework.boot:spring-boot-devtools:2.7.18:jar,org.springframework.boot:spring-boot-starter-test:2.7.18:jar,java:*:21
+2026-02-23T01:09:50.414Z [INFO] getting CVEs for dependencies:
+ - junit:junit:4.13.2:jar
+  - jakarta.validation:jakarta.validation-api:3.0.2:jar
+  - org.mockito:mockito-core:5.2.0:jar
+  - org.mockito:mockito-inline:5.2.0:jar
+  - cglib:cglib:3.3.0:jar
+  - org.springframework.boot:spring-boot-starter-web:2.7.18:jar
+  - org.springframework.boot:spring-boot-starter-data-rest:2.7.18:jar
+  - org.springframework.boot:spring-boot-starter-tomcat:2.7.18:jar
+  - org.springframework.boot:spring-boot-devtools:2.7.18:jar
+  - org.springframework.boot:spring-boot-starter-test:2.7.18:jar
+  - java:*:21...
+2026-02-23T01:09:50.416Z [INFO] getting gitHub access token...
+2026-02-23T01:09:50.419Z [INFO] Processing batch 1/1, size: 11
+2026-02-23T01:09:50.421Z [INFO] listing CVEs from GitHub for dependencies [
+  "junit:junit:4.13.2:jar",
+  "jakarta.validation:jakarta.validation-api:3.0.2:jar",
+  "org.mockito:mockito-core:5.2.0:jar",
+  "org.mockito:mockito-inline:5.2.0:jar",
+  "cglib:cglib:3.3.0:jar",
+  "org.springframework.boot:spring-boot-starter-web:2.7.18:jar",
+  "org.springframework.boot:spring-boot-starter-data-rest:2.7.18:jar",
+  "org.springframework.boot:spring-boot-starter-tomcat:2.7.18:jar",
+  "org.springframework.boot:spring-boot-devtools:2.7.18:jar",
+  "org.springframework.boot:spring-boot-starter-test:2.7.18:jar",
+  "java:*:21"
+]
+2026-02-23T01:09:50.752Z [INFO] Fetched 0 total advisories across all pages
+2026-02-23T01:09:50.757Z [INFO] grouping CVEs and finding max patched version by dep...
+2026-02-23T01:09:50.770Z [INFO] done getting 0 CVEs for 11 dependencies
+2026-02-23T01:09:50.778Z [INFO] calculating patched version by dep...
+2026-02-23T01:09:50.785Z [INFO] finished getting CVEs for dependencies.
+2026-02-23T01:09:50.792Z [INFO] Found 0 dependencies with known CVEs
+2026-02-23T01:09:50.797Z [INFO] No known CVEs that need to be fixed are found for dependencies: junit:junit:4.13.2:jar,jakarta.validation:jakarta.validation-api:3.0.2:jar,org.mockito:mockito-core:5.2.0:jar,org.mockito:mockito-inline:5.2.0:jar,cglib:cglib:3.3.0:jar,org.springframework.boot:spring-boot-starter-web:2.7.18:jar,org.springframework.boot:spring-boot-starter-data-rest:2.7.18:jar,org.springframework.boot:spring-boot-starter-tomcat:2.7.18:jar,org.springframework.boot:spring-boot-devtools:2.7.18:jar,org.springframework.boot:spring-boot-starter-test:2.7.18:jar,java:*:21

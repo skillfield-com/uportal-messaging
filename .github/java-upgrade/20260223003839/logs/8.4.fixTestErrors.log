@@ -1,0 +1,14 @@
+2026-02-23T01:09:38.920Z [INFO] [Task.commitChanges](8.4): Committing changes for /Users/subodhchettri/repo/uportal-messaging with message: Validate build after vulnerability check
+2026-02-23T01:09:38.974Z [INFO] [appmod/java-upgrade-20260223003839 fea59e9] Validate build after vulnerability check
+ 6 files changed, 44 insertions(+), 12 deletions(-)
+
+2026-02-23T01:09:38.989Z [INFO] fea59e9e16a6efe17fa120731dd871c5aa4d6765
+
+2026-02-23T01:09:39.005Z [INFO] 31	2	pom.xml
+2	2	src/main/java/edu/Application.java
+8	5	src/main/java/edu/wisc/my/messages/model/Message.java
+1	1	src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java
+1	1	src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java
+1	1	src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java
+
+2026-02-23T01:09:39.007Z [INFO] [Task.commitChanges](8.4): Committed changes for /Users/subodhchettri/repo/uportal-messaging with message: Validate build after vulnerability check

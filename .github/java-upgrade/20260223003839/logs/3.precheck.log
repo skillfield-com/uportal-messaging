@@ -1,0 +1,1334 @@
+2026-02-23T00:39:59.867Z [INFO] Prechecking project uportal-messaging...
+2026-02-23T00:39:59.867Z [INFO] Prechecking build status...
+2026-02-23T00:40:09.626Z [INFO] Prechecking CVEs...
+2026-02-23T00:40:19.889Z [INFO] Prechecking tests...
+2026-02-23T00:40:19.890Z [INFO] Run tests before upgrading...
+2026-02-23T00:40:39.946Z [INFO] Prepare initial state...
+2026-02-23T00:40:39.951Z [INFO] [Project uportal-messaging]: getting project state.
+2026-02-23T00:40:39.955Z [INFO] [Project uportal-messaging]: getting Java version.
+2026-02-23T00:40:39.958Z [INFO] [Project uportal-messaging]: got Java version: 8
+2026-02-23T00:40:39.961Z [INFO] [Project uportal-messaging]: getting dependencies promise.
+2026-02-23T00:40:39.963Z [INFO] Project initial state: {
+  "javaVersion": "8",
+  "dependencies": [
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-web",
+      "type": "jar",
+      "version": "1.5.9.RELEASE",
+      "scope": "compile",
+      "module": "uportal-messaging"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-data-rest",
+      "type": "jar",
+      "version": "1.5.9.RELEASE",
+      "scope": "compile",
+      "module": "uportal-messaging"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-tomcat",
+      "type": "jar",
+      "version": "1.5.9.RELEASE",
+      "scope": "provided",
+      "module": "uportal-messaging"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-devtools",
+      "type": "jar",
+      "version": "1.5.9.RELEASE",
+      "scope": "compile",
+      "module": "uportal-messaging"
+    },
+    {
+      "groupId": "commons-io",
+      "artifactId": "commons-io",
+      "type": "jar",
+      "version": "2.6",
+      "scope": "compile",
+      "module": "uportal-messaging"
+    },
+    {
+      "groupId": "org.json",
+      "artifactId": "json",
+      "type": "jar",
+      "classifier": "20171018",
+      "version": "compile",
+      "module": "uportal-messaging"
+    },
+    {
+      "groupId": "org.apache.commons",
+      "artifactId": "commons-lang3",
+      "type": "jar",
+      "version": "3.7",
+      "scope": "compile",
+      "module": "uportal-messaging"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-test",
+      "type": "jar",
+      "version": "1.5.9.RELEASE",
+      "scope": "test",
+      "module": "uportal-messaging"
+    },
+    {
+      "groupId": "java",
+      "artifactId": "*",
+      "version": "8"
+    }
+  ],
+  "buildResult": {
+    "numOfJavaFiles": 40,
+    "numOfClassFiles": 40,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 40,
+        "numOfClassFiles": 40
+      }
+    },
+    "errors": [],
+    "command": "mvn clean test-compile -q -B -fn"
+  },
+  "testResult": {
+    "errors": [],
+    "failures": [],
+    "summary": {
+      "tests": 96,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reports": [
+      {
+        "name": "edu.wisc.my.messages.time.IsoDateTimeStringBeforePredicateTest",
+        "time": 0,
+        "tests": 10,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "uwWasIncorporatedBeforeNow",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringBeforePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "stringThatIsNotADateThrows",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringBeforePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "elevensiesIsNotBeforeBreakfast",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringBeforePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "emptyStringEvaluatesFalse",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringBeforePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "breakfastIsBeforeElevensies",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringBeforePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "uwTercentenialIsNotBeforeNow",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringBeforePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "uwWasIncorporatedBeforeNowWhenTimeSpecific",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringBeforePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "whitespaceStringEvaluatesFalse",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringBeforePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "uwTercentenialIsNotBeforeNowWhenTimeSpecific",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringBeforePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "nullEvaluatesFalse",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringBeforePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.time.IsoDateTimeStringAfterPredicateTest",
+        "time": 0,
+        "tests": 10,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "uwWasNotIncorporatedAfterNow",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringAfterPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "elevensiesIsAfterBreakfastDuringAGivenDay",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringAfterPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "nullIsNotAfter",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringAfterPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "uwWasNotIncorporatedAfterNowWhenTimeSpecified",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringAfterPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "garbageThrows",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringAfterPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "whitespaceIsNotAfter",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringAfterPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "uwTercentenialIsAfterNowWhenTimeSpecified",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringAfterPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "uwTercentenialIsAfterNow",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringAfterPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "emptyIsNotAfter",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringAfterPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "breakfastIsNotAfterElevensies",
+            "classname": "edu.wisc.my.messages.time.IsoDateTimeStringAfterPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.service.MessagesServiceTest",
+        "time": 0.033,
+        "tests": 14,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "requestAsUserMessageWithUnknownIdReturnsNull",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "includesOnlyMessagesMatchingAudienceFilters",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0.007,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "requestingMessageWithNullIdThrowsNPE",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "throwsIllegalStateExceptionWhenMultipleMessagesMatchId",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0.004,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "returnsNullWhenNoMatchingId",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "userNotInAudienceCannotReadMessage",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "excludesExpiredMessages",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "handsAlongAllMessagesFromRepository",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "userInAudienceSucccessfullyReadsCurrentMessage",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "userInAudienceCannotReadPrematureMessage",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "userInAudienceCannotReadExpiredMessage",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0.001,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "returnsMessageMatchingId",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "getDemoMessages",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0.02,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "includesUnExpiredMessages",
+            "classname": "edu.wisc.my.messages.service.MessagesServiceTest",
+            "time": 0.001,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.service.MessageIdPredicateTest",
+        "time": 0,
+        "tests": 6,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "matchingIdTestsTrue",
+            "classname": "edu.wisc.my.messages.service.MessageIdPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "nullMessageIdNotMatchingPredicateLookingForNonNullTestsFalse",
+            "classname": "edu.wisc.my.messages.service.MessageIdPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "matchingNullIdTestsTrue",
+            "classname": "edu.wisc.my.messages.service.MessageIdPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "notMatchingPredicateLookingForNullTestsFalse",
+            "classname": "edu.wisc.my.messages.service.MessageIdPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "nullMessageTestsFalse",
+            "classname": "edu.wisc.my.messages.service.MessageIdPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "mismatchIdTestsFalse",
+            "classname": "edu.wisc.my.messages.service.MessageIdPredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.service.GoneLiveMessagePredicateTest",
+        "time": 0,
+        "tests": 8,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "messageWithPrecisePastGoLiveDateHasGoneLive",
+            "classname": "edu.wisc.my.messages.service.GoneLiveMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "messageWithFutureGoLiveDateHasNotGoneLive",
+            "classname": "edu.wisc.my.messages.service.GoneLiveMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "messageWithPastGoLiveDateHasGoneLive",
+            "classname": "edu.wisc.my.messages.service.GoneLiveMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "messageWithPreciseFutureGoeLiveDatehasNotGoneLive",
+            "classname": "edu.wisc.my.messages.service.GoneLiveMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "throwsOnNullMessage",
+            "classname": "edu.wisc.my.messages.service.GoneLiveMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "messageWithoutGoLiveDateHasGoneLive",
+            "classname": "edu.wisc.my.messages.service.GoneLiveMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "messageWithGarbageGoLiveDateHasNotGoneLive",
+            "classname": "edu.wisc.my.messages.service.GoneLiveMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "messageWithNoFilterIsGoneLive",
+            "classname": "edu.wisc.my.messages.service.GoneLiveMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.service.ExpiredMessagePredicateTest",
+        "time": 0.001,
+        "tests": 7,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "preciselyExpiredMessageIsExpired",
+            "classname": "edu.wisc.my.messages.service.ExpiredMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "expiredMessageIsExpired",
+            "classname": "edu.wisc.my.messages.service.ExpiredMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "throwsOnNull",
+            "classname": "edu.wisc.my.messages.service.ExpiredMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "notYetExpiredMessageIsNotExpired",
+            "classname": "edu.wisc.my.messages.service.ExpiredMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "messageWithGarbageExpirationDateIsConsideredExpired",
+            "classname": "edu.wisc.my.messages.service.ExpiredMessagePredicateTest",
+            "time": 0.001,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "preciselyNotYetExpiredMessageIsNotExpired",
+            "classname": "edu.wisc.my.messages.service.ExpiredMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "messageWithNoFilterIsNotExpired",
+            "classname": "edu.wisc.my.messages.service.ExpiredMessagePredicateTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.model.ValidDateTest",
+        "time": 0.002,
+        "tests": 1,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "filterOutNotYetLiveDates",
+            "classname": "edu.wisc.my.messages.model.ValidDateTest",
+            "time": 0.002,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.model.UserTest",
+        "time": 0,
+        "tests": 1,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "cannotSetGroupsToNull",
+            "classname": "edu.wisc.my.messages.model.UserTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.model.MessageFilterTest",
+        "time": 0,
+        "tests": 9,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "filtersWithDifferentGoLiveDatesAreNotEqual",
+            "classname": "edu.wisc.my.messages.model.MessageFilterTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "stringRepresentationContainsGoLiveDate",
+            "classname": "edu.wisc.my.messages.model.MessageFilterTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "matchesWhenUserIsInAMatchingGroup",
+            "classname": "edu.wisc.my.messages.model.MessageFilterTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "filtersWithSameGroupsAndDatesAreEqual",
+            "classname": "edu.wisc.my.messages.model.MessageFilterTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "stringRepresentationContainsGroups",
+            "classname": "edu.wisc.my.messages.model.MessageFilterTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "filtersWithDifferentGroupsAreNotEqual",
+            "classname": "edu.wisc.my.messages.model.MessageFilterTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "doesNotMatchWhenUserIsInNoMatchingGroup",
+            "classname": "edu.wisc.my.messages.model.MessageFilterTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "filtersWithDifferentExpireDatesAreNotEqual",
+            "classname": "edu.wisc.my.messages.model.MessageFilterTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "stringRepresentationContainsExpireDate",
+            "classname": "edu.wisc.my.messages.model.MessageFilterTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.model.MessageArrayTest",
+        "time": 0,
+        "tests": 1,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "createMessageArrayFromList",
+            "classname": "edu.wisc.my.messages.model.MessageArrayTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.model.ActionButtonTest",
+        "time": 0.001,
+        "tests": 5,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "stringRepresentationContainsUrl",
+            "classname": "edu.wisc.my.messages.model.ActionButtonTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "buttonsWithSameLabelAndUrlAreEqual",
+            "classname": "edu.wisc.my.messages.model.ActionButtonTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "differentLabelsYieldDifferentHashCodes",
+            "classname": "edu.wisc.my.messages.model.ActionButtonTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "actionButtonsCanBeCreatedElegantly",
+            "classname": "edu.wisc.my.messages.model.ActionButtonTest",
+            "time": 0.001,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "stringRepresentationContainsLabel",
+            "classname": "edu.wisc.my.messages.model.ActionButtonTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.exception.PrematureMessageExceptionTest",
+        "time": 0,
+        "tests": 1,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "copesWithNullConstructorArguments",
+            "classname": "edu.wisc.my.messages.exception.PrematureMessageExceptionTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.exception.ExpiredMessageExceptionTest",
+        "time": 0,
+        "tests": 1,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "copesWithNullConstructorArguments",
+            "classname": "edu.wisc.my.messages.exception.ExpiredMessageExceptionTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.data.MessagesFromTextFileTest",
+        "time": 0.018,
+        "tests": 2,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "ioExceptionPropagates",
+            "classname": "edu.wisc.my.messages.data.MessagesFromTextFileTest",
+            "time": 0.017,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "exceptionPropagates",
+            "classname": "edu.wisc.my.messages.data.MessagesFromTextFileTest",
+            "time": 0.001,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.controller.MessagesControllerUnitTest",
+        "time": 0.097,
+        "tests": 7,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "passesSpecificMessageToView",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerUnitTest",
+            "time": 0.054,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "passesSpecificMessageToViewForUser",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerUnitTest",
+            "time": 0.037,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "throwsNotFoundExceptionWhenNoMessageByIdAdmin",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerUnitTest",
+            "time": 0.001,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "passesGroupsToService",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerUnitTest",
+            "time": 0.004,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "throwsNotFoundExceptionWhenNoMessageById",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerUnitTest",
+            "time": 0.001,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "passesAllMessagesToView",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerUnitTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "usesIsMemberOfHeader",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerUnitTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.controller.MessagesControllerTest",
+        "time": 0.442,
+        "tests": 9,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "expiredMessageByIdYieldsError",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerTest",
+            "time": 0.231,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "messageById",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerTest",
+            "time": 0.055,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "notInAudienceMessageByIdYieldsError",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerTest",
+            "time": 0.032,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "adminMessageById",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerTest",
+            "time": 0.033,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "notFoundMessageYields404",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerTest",
+            "time": 0.027,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "dataIsValid",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerTest",
+            "time": 0.015,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "siteIsUp",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerTest",
+            "time": 0.012,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "prematureMessageByIdYieldsError",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerTest",
+            "time": 0.012,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "adminNotFoundMessageYields404",
+            "classname": "edu.wisc.my.messages.controller.MessagesControllerTest",
+            "time": 0.025,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      },
+      {
+        "name": "edu.wisc.my.messages.controller.IsMemberOfHeaderParserTest",
+        "time": 0,
+        "tests": 4,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "parsesManyValuedHeader",
+            "classname": "edu.wisc.my.messages.controller.IsMemberOfHeaderParserTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "parsesSingleGroupValue",
+            "classname": "edu.wisc.my.messages.controller.IsMemberOfHeaderParserTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "parsesNullAsEmptySet",
+            "classname": "edu.wisc.my.messages.controller.IsMemberOfHeaderParserTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          },
+          {
+            "name": "parsesSemicolonTerminateSingleGroupValue",
+            "classname": "edu.wisc.my.messages.controller.IsMemberOfHeaderParserTest",
+            "time": 0,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      }
+    ]
+  }
+}

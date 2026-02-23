@@ -1,0 +1,22 @@
+2026-02-23T01:09:39.028Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2026-02-23T01:09:39.029Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/homebrew/Cellar/maven/3.9.11/libexec
+Java version: 21.0.10, vendor: Homebrew, runtime: /opt/homebrew/Cellar/openjdk@21/21.0.10/libexec/openjdk.jdk/Contents/Home
+Default locale: en_AU, platform encoding: UTF-8
+OS name: "mac os x", version: "26.3", arch: "aarch64", family: "mac"
+2026-02-23T01:09:39.493Z [INFO] [BaseBuildTool] New version of mvn: 3.9.11 -> 3.9.11
+2026-02-23T01:09:39.500Z [INFO] [MavenBuildTool] Getting Java version of /Users/subodhchettri/repo/uportal-messaging from pom.xml
+2026-02-23T01:09:39.504Z [INFO] [MavenBuildTool] Searching for pom.xml files in /Users/subodhchettri/repo/uportal-messaging
+2026-02-23T01:09:39.509Z [INFO] [MavenBuildTool] Found pom.xml files: /Users/subodhchettri/repo/uportal-messaging/pom.xml
+2026-02-23T01:09:39.514Z [INFO] [MavenBuildTool] Java version found in /Users/subodhchettri/repo/uportal-messaging/pom.xml: 21
+2026-02-23T01:09:39.518Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+2026-02-23T01:09:39.551Z [INFO] [MavenBuildTool] Getting build errors of /Users/subodhchettri/repo/uportal-messaging using Maven
+2026-02-23T01:09:39.554Z [INFO] [Environment] Running command (Java 21): mvn clean test-compile -q -B -fn
+2026-02-23T01:09:41.677Z [INFO] [MavenBuildTool] parsing compilation errors.
+2026-02-23T01:09:41.680Z [INFO] [BaseBuildTool] Found 1 modules: .
+2026-02-23T01:09:41.691Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2026-02-23T01:09:41.694Z [INFO] [MavenBuildTool] Cleaning /Users/subodhchettri/repo/uportal-messaging using Maven
+2026-02-23T01:09:41.698Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2026-02-23T01:09:42.531Z [INFO] Build succeeded! There are no build errors in the project.
+2026-02-23T01:09:42.551Z [INFO] Build project completed. Looking for next task...

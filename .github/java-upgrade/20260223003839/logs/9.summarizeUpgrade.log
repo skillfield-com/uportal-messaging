@@ -1,0 +1,365 @@
+2026-02-23T01:10:12.146Z [INFO] [Project uportal-messaging]: getting Java version.
+2026-02-23T01:10:12.146Z [INFO] [Project uportal-messaging]: got Java version: 21
+2026-02-23T01:10:12.149Z [INFO] [Project uportal-messaging]: getting project state.
+2026-02-23T01:10:12.150Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2026-02-23T01:10:12.153Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/homebrew/Cellar/maven/3.9.11/libexec
+Java version: 21.0.10, vendor: Homebrew, runtime: /opt/homebrew/Cellar/openjdk@21/21.0.10/libexec/openjdk.jdk/Contents/Home
+Default locale: en_AU, platform encoding: UTF-8
+OS name: "mac os x", version: "26.3", arch: "aarch64", family: "mac"
+2026-02-23T01:10:12.699Z [INFO] [BaseBuildTool] New version of mvn: 3.9.11 -> 3.9.11
+2026-02-23T01:10:12.703Z [INFO] [MavenBuildTool] Getting Java version of /Users/subodhchettri/repo/uportal-messaging from pom.xml
+2026-02-23T01:10:12.705Z [INFO] [MavenBuildTool] Searching for pom.xml files in /Users/subodhchettri/repo/uportal-messaging
+2026-02-23T01:10:12.706Z [INFO] [MavenBuildTool] Found pom.xml files: /Users/subodhchettri/repo/uportal-messaging/pom.xml
+2026-02-23T01:10:12.708Z [INFO] [MavenBuildTool] Java version found in /Users/subodhchettri/repo/uportal-messaging/pom.xml: 21
+2026-02-23T01:10:12.709Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+2026-02-23T01:10:12.722Z [INFO] [Project uportal-messaging]: getting Java version.
+2026-02-23T01:10:12.724Z [INFO] [Project uportal-messaging]: got Java version: 21
+2026-02-23T01:10:12.725Z [INFO] [Project uportal-messaging]: getting dependencies promise.
+2026-02-23T01:10:12.727Z [INFO] [Project uportal-messaging]: reset dependencies promise.
+2026-02-23T01:10:12.730Z [INFO] [Environment] Running command (Java 21): mvn dependency:tree -B
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< edu.wisc.my.app:uportal-messaging >------------------
+[INFO] Building uportal-messaging 0.1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.3.0:tree (default-cli) @ uportal-messaging ---
+[INFO] edu.wisc.my.app:uportal-messaging:war:0.1.0-SNAPSHOT
+[INFO] +- junit:junit:jar:4.13.2:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:2.2:test
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:2.7.18:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:2.7.18:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:2.7.18:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.2.12:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.2.12:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.17.2:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:1.7.36:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:1.30:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:2.7.18:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile
+[INFO] |  +- org.springframework:spring-web:jar:5.3.31:compile
+[INFO] |  |  \- org.springframework:spring-beans:jar:5.3.31:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:5.3.31:compile
+[INFO] |     +- org.springframework:spring-aop:jar:5.3.31:compile
+[INFO] |     +- org.springframework:spring-context:jar:5.3.31:compile
+[INFO] |     \- org.springframework:spring-expression:jar:5.3.31:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-data-rest:jar:2.7.18:compile
+[INFO] |  \- org.springframework.data:spring-data-rest-webmvc:jar:3.7.18:compile
+[INFO] |     +- org.springframework.data:spring-data-rest-core:jar:3.7.18:compile
+[INFO] |     |  +- org.springframework:spring-tx:jar:5.3.31:compile
+[INFO] |     |  +- org.springframework.hateoas:spring-hateoas:jar:1.5.6:compile
+[INFO] |     |  +- org.springframework.data:spring-data-commons:jar:2.7.18:compile
+[INFO] |     |  +- org.springframework.plugin:spring-plugin-core:jar:2.0.0.RELEASE:compile
+[INFO] |     |  \- org.atteo:evo-inflector:jar:1.3:compile
+[INFO] |     +- com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile
+[INFO] |     \- org.slf4j:slf4j-api:jar:1.7.36:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.18:provided
+[INFO] |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.83:provided
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.83:provided
+[INFO] |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.83:provided
+[INFO] +- org.springframework.boot:spring-boot-devtools:jar:2.7.18:compile
+[INFO] |  +- org.springframework.boot:spring-boot:jar:2.7.18:compile
+[INFO] |  \- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
+[INFO] +- commons-io:commons-io:jar:2.6:compile
+[INFO] +- org.json:json:jar:20171018:compile
+[INFO] +- org.apache.commons:commons-lang3:jar:3.7:compile
+[INFO] +- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-test:jar:2.7.18:test
+[INFO] |  +- org.springframework.boot:spring-boot-test:jar:2.7.18:test
+[INFO] |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.18:test
+[INFO] |  +- com.jayway.jsonpath:json-path:jar:2.7.0:compile
+[INFO] |  |  \- net.minidev:json-smart:jar:2.4.11:compile
+[INFO] |  |     \- net.minidev:accessors-smart:jar:2.4.11:compile
+[INFO] |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test
+[INFO] |  |  \- jakarta.activation:jakarta.activation-api:jar:1.2.2:test
+[INFO] |  +- org.assertj:assertj-core:jar:3.22.0:test
+[INFO] |  +- org.hamcrest:hamcrest:jar:2.2:test
+[INFO] |  +- org.junit.jupiter:junit-jupiter:jar:5.8.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test
+[INFO] |  |  |  +- org.opentest4j:opentest4j:jar:1.2.0:test
+[INFO] |  |  |  +- org.junit.platform:junit-platform-commons:jar:1.8.2:test
+[INFO] |  |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO] |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test
+[INFO] |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test
+[INFO] |  |     \- org.junit.platform:junit-platform-engine:jar:1.8.2:test
+[INFO] |  +- org.mockito:mockito-junit-jupiter:jar:4.5.1:test
+[INFO] |  +- org.skyscreamer:jsonassert:jar:1.5.1:test
+[INFO] |  +- org.springframework:spring-core:jar:5.3.31:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.3.31:compile
+[INFO] |  +- org.springframework:spring-test:jar:5.3.31:test
+[INFO] |  \- org.xmlunit:xmlunit-core:jar:2.9.1:test
+[INFO] +- org.mockito:mockito-core:jar:5.2.0:test
+[INFO] |  +- net.bytebuddy:byte-buddy:jar:1.12.23:test
+[INFO] |  +- net.bytebuddy:byte-buddy-agent:jar:1.12.23:test
+[INFO] |  \- org.objenesis:objenesis:jar:3.3:test
+[INFO] +- org.mockito:mockito-inline:jar:5.2.0:test
+[INFO] \- cglib:cglib:jar:3.3.0:test
+[INFO]    \- org.ow2.asm:asm:jar:7.1:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.823 s
+[INFO] Finished at: 2026-02-23T12:10:14+11:00
+[INFO] ------------------------------------------------------------------------
+2026-02-23T01:10:14.285Z [INFO] [MavenBuildTool] Successfully got dependency tree of /Users/subodhchettri/repo/uportal-messaging
+2026-02-23T01:10:14.294Z [INFO] [MavenBuildTool] Getting Java version of /Users/subodhchettri/repo/uportal-messaging from pom.xml
+2026-02-23T01:10:14.298Z [INFO] [MavenBuildTool] Searching for pom.xml files in /Users/subodhchettri/repo/uportal-messaging
+2026-02-23T01:10:14.302Z [INFO] [MavenBuildTool] Found pom.xml files: /Users/subodhchettri/repo/uportal-messaging/pom.xml
+2026-02-23T01:10:14.307Z [INFO] [MavenBuildTool] Java version found in /Users/subodhchettri/repo/uportal-messaging/pom.xml: 21
+2026-02-23T01:10:14.311Z [INFO] [MavenBuildTool] Getting build errors of /Users/subodhchettri/repo/uportal-messaging using Maven
+2026-02-23T01:10:14.315Z [INFO] [Environment] Running command (Java 21): mvn clean test-compile -q -B -fn
+2026-02-23T01:10:16.021Z [INFO] [MavenBuildTool] parsing compilation errors.
+2026-02-23T01:10:16.024Z [INFO] [BaseBuildTool] Found 1 modules: .
+2026-02-23T01:10:16.033Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2026-02-23T01:10:16.035Z [INFO] [MavenBuildTool] Cleaning /Users/subodhchettri/repo/uportal-messaging using Maven
+2026-02-23T01:10:16.038Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2026-02-23T01:10:16.862Z [INFO] [MavenBuildTool] Running test cases of /Users/subodhchettri/repo/uportal-messaging using Maven
+2026-02-23T01:10:16.865Z [INFO] [Environment] Running command (Java 21): mvn clean test -q -B -fn
+2026-02-23T01:10:19.329Z [INFO] [MavenBuildTool] loading surefire reports.
+2026-02-23T01:10:19.336Z [INFO] [MavenBuildTool] summarizing surefire reports.
+2026-02-23T01:10:19.338Z [INFO] [MavenBuildTool] Cleaning /Users/subodhchettri/repo/uportal-messaging using Maven
+2026-02-23T01:10:19.340Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2026-02-23T01:10:20.136Z [INFO] Add test changes to summary...
+2026-02-23T01:10:20.179Z [INFO] 31	2	pom.xml
+5	0	rewrite.yml
+2	2	src/main/java/edu/Application.java
+8	5	src/main/java/edu/wisc/my/messages/model/Message.java
+1	1	src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java
+1	1	src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java
+1	1	src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java
+
+2026-02-23T01:10:20.179Z [INFO] Add test errors to summary...
+2026-02-23T01:10:20.183Z [INFO] getting CVEs for dependencies:
+ - junit:junit:4.13.2
+  - org.springframework.boot:spring-boot-starter-web:2.7.18
+  - org.springframework.boot:spring-boot-starter-data-rest:2.7.18
+  - org.springframework.boot:spring-boot-starter-tomcat:2.7.18
+  - org.springframework.boot:spring-boot-devtools:2.7.18
+  - commons-io:commons-io:2.6
+  - org.json:json:compile
+  - org.apache.commons:commons-lang3:3.7
+  - jakarta.validation:jakarta.validation-api:3.0.2
+  - org.springframework.boot:spring-boot-starter-test:2.7.18
+  - org.mockito:mockito-core:5.2.0
+  - org.mockito:mockito-inline:5.2.0
+  - cglib:cglib:3.3.0
+  - java:*:21...
+2026-02-23T01:10:20.187Z [INFO] getting gitHub access token...
+2026-02-23T01:10:20.189Z [INFO] Processing batch 1/1, size: 14
+2026-02-23T01:10:20.192Z [INFO] listing CVEs from GitHub for dependencies [
+  "junit:junit:4.13.2",
+  "org.springframework.boot:spring-boot-starter-web:2.7.18",
+  "org.springframework.boot:spring-boot-starter-data-rest:2.7.18",
+  "org.springframework.boot:spring-boot-starter-tomcat:2.7.18",
+  "org.springframework.boot:spring-boot-devtools:2.7.18",
+  "commons-io:commons-io:2.6",
+  "org.json:json:compile",
+  "org.apache.commons:commons-lang3:3.7",
+  "jakarta.validation:jakarta.validation-api:3.0.2",
+  "org.springframework.boot:spring-boot-starter-test:2.7.18",
+  "org.mockito:mockito-core:5.2.0",
+  "org.mockito:mockito-inline:5.2.0",
+  "cglib:cglib:3.3.0",
+  "java:*:21"
+]
+2026-02-23T01:10:20.652Z [INFO] Fetched 6 total advisories across all pages
+2026-02-23T01:10:20.662Z [INFO] grouping CVEs and finding max patched version by dep...
+2026-02-23T01:10:20.669Z [INFO] done getting 3 CVEs for 14 dependencies
+2026-02-23T01:10:20.677Z [INFO] calculating patched version by dep...
+2026-02-23T01:10:20.685Z [INFO] CVE CVE-2021-29425 for commons-io:commons-io:2.6: patched version 2.7
+2026-02-23T01:10:20.693Z [INFO] CVE CVE-2024-47554 for commons-io:commons-io:2.6: patched version 2.14.0
+2026-02-23T01:10:20.700Z [WARN] Skipping CVE calculation for org.json:json:compile due to invalid semver
+2026-02-23T01:10:20.706Z [INFO] CVE CVE-2025-48924 for org.apache.commons:commons-lang3:3.7: patched version 3.18.0
+2026-02-23T01:10:20.712Z [INFO] finished getting CVEs for dependencies.
+2026-02-23T01:10:20.752Z [INFO] diff --git a/pom.xml b/pom.xml
+index cae2f66..749c934 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -11,7 +11,7 @@
+   <parent>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-parent</artifactId>
+-    <version>1.5.9.RELEASE</version>
++    <version>2.7.18</version>
+   </parent>
+ 
+   <packaging>war</packaging>
+@@ -71,6 +71,12 @@
+   </repositories>
+ 
+   <dependencies>
++        <dependency>
++          <groupId>junit</groupId>
++          <artifactId>junit</artifactId>
++          <version>4.13.2</version>
++          <scope>test</scope>
++        </dependency>
+     <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-web</artifactId>
+@@ -103,6 +109,11 @@
+       <artifactId>commons-lang3</artifactId>
+       <version>3.7</version>
+     </dependency>
++    <dependency>
++      <groupId>jakarta.validation</groupId>
++      <artifactId>jakarta.validation-api</artifactId>
++      <version>3.0.2</version>
++    </dependency>
+     <!-- tag::tests[] -->
+     <dependency>
+       <groupId>org.springframework.boot</groupId>
+@@ -115,11 +126,29 @@
+       	</exclusion>
+       </exclusions>
+     </dependency>
++    <dependency>
++      <groupId>org.mockito</groupId>
++      <artifactId>mockito-core</artifactId>
++      <version>5.2.0</version>
++      <scope>test</scope>
++    </dependency>
++    <dependency>
++      <groupId>org.mockito</groupId>
++      <artifactId>mockito-inline</artifactId>
++      <version>5.2.0</version>
++      <scope>test</scope>
++    </dependency>
++    <dependency>
++      <groupId>cglib</groupId>
++      <artifactId>cglib</artifactId>
++      <version>3.3.0</version>
++      <scope>test</scope>
++    </dependency>
+     <!-- end::tests[] -->
+   </dependencies>
+ 
+   <properties>
+-    <java.version>1.8</java.version>
++    <java.version>21</java.version>
+   </properties>
+ 
+   <build>
+diff --git a/rewrite.yml b/rewrite.yml
+new file mode 100644
+index 0000000..46ec8b4
+--- /dev/null
++++ b/rewrite.yml
+@@ -0,0 +1,5 @@
++---
++activeRecipes:
++  - org.openrewrite.java.spring.boot2.UpgradeSpringBoot_2_7
++  - org.openrewrite.java.migrate.UpgradeToJava21
++---
+diff --git a/src/main/java/edu/Application.java b/src/main/java/edu/Application.java
+index f3dcdf4..e02b19c 100644
+--- a/src/main/java/edu/Application.java
++++ b/src/main/java/edu/Application.java
+@@ -2,10 +2,10 @@ package edu;
+ 
+ import org.springframework.boot.SpringApplication;
+ import org.springframework.boot.autoconfigure.SpringBootApplication;
+-import org.springframework.boot.web.support.SpringBootServletInitializer;
++// import removed for Spring Boot 2.7.x
+ 
+ @SpringBootApplication
+-public class Application extends SpringBootServletInitializer {
++public class Application {
+ 
+   public static void main(String[] args) {
+     SpringApplication.run(Application.class, args);
+diff --git a/src/main/java/edu/wisc/my/messages/model/Message.java b/src/main/java/edu/wisc/my/messages/model/Message.java
+index 5b42834..ce24ff1 100644
+--- a/src/main/java/edu/wisc/my/messages/model/Message.java
++++ b/src/main/java/edu/wisc/my/messages/model/Message.java
+@@ -1,16 +1,19 @@
+ package edu.wisc.my.messages.model;
+ 
+-import com.fasterxml.jackson.annotation.JsonIgnore;
+-import com.fasterxml.jackson.annotation.JsonProperty;
+-import edu.wisc.my.messages.service.ExpiredMessagePredicate;
+-import edu.wisc.my.messages.service.GoneLiveMessagePredicate;
+ import java.time.LocalDateTime;
+ import java.util.Objects;
+ import java.util.function.Predicate;
+-import javax.validation.constraints.NotNull;
++
+ import org.slf4j.Logger;
+ import org.slf4j.LoggerFactory;
+ 
++import com.fasterxml.jackson.annotation.JsonIgnore;
++import com.fasterxml.jackson.annotation.JsonProperty;
++
++import edu.wisc.my.messages.service.ExpiredMessagePredicate;
++import edu.wisc.my.messages.service.GoneLiveMessagePredicate;
++import jakarta.validation.constraints.NotNull;
++
+ /**
+  * Message
+  */
+diff --git a/src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java b/src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java
+index bb63a00..c02f1b2 100644
+--- a/src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java
++++ b/src/test/java/edu/wisc/my/messages/controller/MessagesControllerIT.java
+@@ -9,7 +9,7 @@ import org.junit.Before;
+ import org.junit.Test;
+ import org.junit.runner.RunWith;
+ import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.context.embedded.LocalServerPort;
++import org.springframework.boot.web.server.LocalServerPort;
+ import org.springframework.boot.test.context.SpringBootTest;
+ import org.springframework.boot.test.web.client.TestRestTemplate;
+ import org.springframework.http.ResponseEntity;
+diff --git a/src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java b/src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java
+index d632ac6..3e8b2c8 100644
+--- a/src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java
++++ b/src/test/java/edu/wisc/my/messages/controller/MessagesControllerUnitTest.java
+@@ -2,7 +2,7 @@ package edu.wisc.my.messages.controller;
+ 
+ import static org.junit.Assert.assertEquals;
+ import static org.junit.Assert.assertSame;
+-import static org.mockito.Matchers.eq;
++import static org.mockito.ArgumentMatchers.eq;
+ import static org.mockito.Mockito.any;
+ import static org.mockito.Mockito.anyString;
+ import static org.mockito.Mockito.mock;
+diff --git a/src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java b/src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java
+index 7760b76..398a577 100644
+--- a/src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java
++++ b/src/test/java/edu/wisc/my/messages/service/MessagesServiceTest.java
+@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
+ import static org.junit.Assert.assertNotNull;
+ import static org.junit.Assert.assertNull;
+ import static org.junit.Assert.assertTrue;
+-import static org.mockito.Matchers.any;
++import static org.mockito.ArgumentMatchers.any;
+ import static org.mockito.Mockito.mock;
+ import static org.mockito.Mockito.when;
+ 
+
+2026-02-23T01:10:20.755Z [INFO] [unknown]: getting broken files...
+2026-02-23T01:10:20.763Z [INFO] [unknown]: found 0 broken files.
+2026-02-23T01:10:20.769Z [INFO] [unknown]: there are 164 lines.
+2026-02-23T01:10:21.004Z [INFO] [unknown]: there are 1570 tokens.
+2026-02-23T01:10:21.017Z [INFO] [unknown]: no need to split the diff file.
+2026-02-23T01:10:21.026Z [INFO] summarizing behavior changes...
+2026-02-23T01:10:21.036Z [INFO] summarizing behavior changes of part 1...
+2026-02-23T01:10:24.675Z [INFO] summarized behavior changes of part 1.
+2026-02-23T01:10:24.675Z [INFO] summarized behavior changes of all parts.
+2026-02-23T01:10:24.694Z [INFO] summarizing behavior changes...
+2026-02-23T01:10:24.707Z [INFO] summarizing behavior changes of part 1...
+2026-02-23T01:10:27.541Z [INFO] summarized behavior changes of part 1.
+2026-02-23T01:10:27.547Z [INFO] summarized behavior changes of all parts.
+2026-02-23T01:10:27.551Z [INFO] summarizing behavior changes...
+2026-02-23T01:10:27.556Z [INFO] summarizing behavior changes of part 1...
+2026-02-23T01:10:28.934Z [INFO] summarized behavior changes of part 1.
+2026-02-23T01:10:28.945Z [INFO] summarized behavior changes of all parts.

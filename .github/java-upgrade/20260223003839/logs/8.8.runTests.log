@@ -1,0 +1,20 @@
+2026-02-23T01:10:03.738Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2026-02-23T01:10:03.739Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: /opt/homebrew/Cellar/maven/3.9.11/libexec
+Java version: 21.0.10, vendor: Homebrew, runtime: /opt/homebrew/Cellar/openjdk@21/21.0.10/libexec/openjdk.jdk/Contents/Home
+Default locale: en_AU, platform encoding: UTF-8
+OS name: "mac os x", version: "26.3", arch: "aarch64", family: "mac"
+2026-02-23T01:10:04.172Z [INFO] [BaseBuildTool] New version of mvn: 3.9.11 -> 3.9.11
+2026-02-23T01:10:04.180Z [INFO] [MavenBuildTool] Getting Java version of /Users/subodhchettri/repo/uportal-messaging from pom.xml
+2026-02-23T01:10:04.184Z [INFO] [MavenBuildTool] Searching for pom.xml files in /Users/subodhchettri/repo/uportal-messaging
+2026-02-23T01:10:04.187Z [INFO] [MavenBuildTool] Found pom.xml files: /Users/subodhchettri/repo/uportal-messaging/pom.xml
+2026-02-23T01:10:04.189Z [INFO] [MavenBuildTool] Java version found in /Users/subodhchettri/repo/uportal-messaging/pom.xml: 21
+2026-02-23T01:10:04.192Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+2026-02-23T01:10:04.219Z [INFO] Running tests...
+2026-02-23T01:10:04.220Z [INFO] [MavenBuildTool] Running test cases of /Users/subodhchettri/repo/uportal-messaging using Maven
+2026-02-23T01:10:04.223Z [INFO] [Environment] Running command (Java 21): mvn clean test -q -B -fn
+2026-02-23T01:10:07.087Z [INFO] [MavenBuildTool] loading surefire reports.
+2026-02-23T01:10:07.100Z [INFO] [MavenBuildTool] summarizing surefire reports.
+2026-02-23T01:10:07.105Z [INFO] [MavenBuildTool] Cleaning /Users/subodhchettri/repo/uportal-messaging using Maven
+2026-02-23T01:10:07.108Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
